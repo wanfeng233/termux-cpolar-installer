@@ -100,7 +100,7 @@ completion_message() {
     echo -e "${INFO} 现在需要重新启动Termux，可以执行 'exit' 退出。"
     echo -e "${INFO} 重启Termux完成后，可以使用 'sv up cpolar' 启动cpolar。"
     echo -e "${INFO} 也可以使用 'sv-enable cpolar' 开启cpolar自启动。"
-    echo -e "${INFO} 原项目地址：github.com/wanfeng233/termux-cpolar-installer"
+    echo -e "${INFO} 项目地址：github.com/wanfeng233/termux-cpolar-installer"
 }
 
 # Ctrl+C中断处理
