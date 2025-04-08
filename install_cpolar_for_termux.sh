@@ -101,6 +101,7 @@ completion_message() {
     echo -e "${INFO} 重启Termux完成后，可以使用 'sv up cpolar' 启动cpolar。"
     echo -e "${INFO} 也可以使用 'sv-enable cpolar' 开启cpolar自启动。"
     echo -e "${INFO} 项目地址：github.com/wanfeng233/termux-cpolar-installer"
+    echo -e "${INFO} 更多芝士：cpolar.com/blog"
 }
 
 # Ctrl+C中断处理
