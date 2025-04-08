@@ -1,5 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
-# cpolar安装脚本 - Ver.0.4
+# cpolar安装脚本 - Ver.0.5
 
 # 定义颜色变量
 GREEN='\e[1;32m'   # 绿色
@@ -23,7 +23,11 @@ welcome_message() {
 
 # 检查cpolar是否已安装
 check_installed() {
-    if pkg list-installed cpolar >/dev/null 2>&1; then
+    # 捕获 pkg list-installed 的输出
+    output=$(pkg list-installed cpolar 2>&1)
+
+    # 检查输出是否包含 "cpolar"
+    if echo "$output" | grep -q "cpolar"; then
         echo -e "${INFO} 检测到cpolar已安装，将更新cpolar"
         is_installed=true
     else
@@ -96,6 +100,7 @@ completion_message() {
     echo -e "${INFO} 现在需要重新启动Termux，可以执行 'exit' 退出。"
     echo -e "${INFO} 重启Termux完成后，可以使用 'sv up cpolar' 启动cpolar。"
     echo -e "${INFO} 也可以使用 'sv-enable cpolar' 开启cpolar自启动。"
+    echo -e "${INFO} 原项目地址：github.com/wanfeng233/termux-cpolar-installer"
 }
 
 # Ctrl+C中断处理
