@@ -8,10 +8,15 @@ Termux Cpolar Installer 是一个自动化脚本，用于在 Termux 环境中安
 
 ## 安装步骤
 
-在 Termux 中运行以下命令下载脚本：
+在 termux 执行一键安装命令：
 
+curl
 ```bash
-curl -sL https://raw.githubusercontent.com/wanfeng233/termux-cpolar-installer/main/install_cpolar_for_termux.sh -o install_cpolar_for_termux.sh && bash install_cpolar_for_termux.sh
+curl -L https://raw.githubusercontent.com/wanfeng233/termux-cpolar-installer/main/install_cpolar_for_termux.sh -o install_cpolar_for_termux.sh && bash install_cpolar_for_termux.sh
+```
+wget
+```bash
+wget https://raw.githubusercontent.com/wanfeng233/termux-cpolar-installer/main/install_cpolar_for_termux.sh -O install_cpolar_for_termux.sh && bash install_cpolar_for_termux.sh
 ```
 
 ## termux for cpolar 使用方法
